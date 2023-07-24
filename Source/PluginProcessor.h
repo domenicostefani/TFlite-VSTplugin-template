@@ -1,12 +1,12 @@
 /*
- * This file contains the basic framework code for a JUCE plugin that uses the ONNX runtime for deep inference.
+ * This file contains the basic framework code for a JUCE plugin that uses the TensorFlow Lite library for deep inference.
 */
 
 #pragma once
 
 #include <JuceHeader.h>
 
-#include "TFliteWrapper.h" // Put your ONNX code here
+#include "tflitewrapper.h" // Put your tflite code here
 
 //==============================================================================
 /**
@@ -52,6 +52,7 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
 
 private:
+
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TFliteTemplatePluginAudioProcessor)
 };

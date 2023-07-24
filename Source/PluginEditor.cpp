@@ -1,5 +1,5 @@
 /*
- * This file contains the basic framework code for a JUCE plugin that uses the ONNX runtime for deep inference.
+ * This file contains the basic framework code for a JUCE plugin that uses the TensorFlow Lite library for deep inference.
 */
 
 #include "PluginProcessor.h"
@@ -26,7 +26,7 @@ void TFliteTemplatePluginAudioProcessorEditor::paint (juce::Graphics& g)
 
     g.setColour (juce::Colours::white);
     g.setFont (15.0f);
-    g.drawFittedText ("Hello World!", getLocalBounds(), juce::Justification::centred, 1);
+    g.drawFittedText ("TensorFlow Lite VST template", getLocalBounds(), juce::Justification::centred, 1);
 }
 
 void TFliteTemplatePluginAudioProcessorEditor::resized()

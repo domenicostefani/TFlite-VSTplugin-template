@@ -1,5 +1,5 @@
 /*
- * This file contains the basic framework code for a JUCE plugin that uses the ONNX runtime for deep inference.
+ * This file contains the basic framework code for a JUCE plugin that uses the TensorFlow Lite library for deep inference.
 */
 
 #pragma once

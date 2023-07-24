@@ -1,9 +1,10 @@
 /*
- * This file contains the basic framework code for a JUCE plugin that uses the ONNX runtime for deep inference.
+ * This file contains the basic framework code for a JUCE plugin that uses the TensorFlow Lite library for deep inference.
 */
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+
 
 //==============================================================================
 TFliteTemplatePluginAudioProcessor::TFliteTemplatePluginAudioProcessor()
@@ -18,6 +19,7 @@ TFliteTemplatePluginAudioProcessor::TFliteTemplatePluginAudioProcessor()
                        )
 #endif
 {
+
 }
 
 TFliteTemplatePluginAudioProcessor::~TFliteTemplatePluginAudioProcessor()
@@ -148,6 +150,7 @@ void TFliteTemplatePluginAudioProcessor::processBlock (juce::AudioBuffer<float>&
     // interleaved by keeping the same state.
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
+        auto* channelDataIn = buffer.getWritePointer (channel);
         auto* channelData = buffer.getWritePointer (channel);
 
         // ..do something to the data...
